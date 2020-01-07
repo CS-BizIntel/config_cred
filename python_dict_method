@@ -1,0 +1,9 @@
+PassWordDict = {}
+Credentials = [] # List of Credential Names
+              
+for crede in Credentials:
+    for line in open(r"address of config file", 'r'):
+        if crede in line:
+            key = '{}'.format(crede)
+            value = '{}'.format(line.split('=')[-1].strip())
+            PassWordDict.update({key : value}) 
